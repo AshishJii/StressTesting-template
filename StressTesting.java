@@ -1,10 +1,6 @@
-package week2;
-
-import java.util.Arrays;
 import java.util.Random;
 
 public class Stress_testing {
-
     private static Random random = new Random();
 
     static int[] Algorithm1(int param[]) {
@@ -17,27 +13,23 @@ public class Stress_testing {
         return param;
     }
 
-
     public static void main(String[] args) {
-
         long totalChange = 0;
         long totalIterations = 0;
         while (true) {
             System.out.println("\n---------------------------------------------------------------------------------------");
             int n = (int) (Math.random() * 20);
 
-            //declaration
+            //Generate random input test values
             int[] arr1 = new int[n];
             int[] arr2 = new int[n];
-
-            //initialisation
             for (int i = 0; i < n; i++) {
                 int tmp = (int) (Math.random() * 1000);
                 arr1[i] = tmp;
                 arr2[i] = tmp;
             }
 
-            //print randomly generated input
+            //Print generated input
             for (int j : arr1) System.out.print(j + " ");
             System.out.println("");
 
@@ -61,7 +53,6 @@ public class Stress_testing {
                     break;
                 }
             }
-
 
             //Printing final output
             if (!same) {
